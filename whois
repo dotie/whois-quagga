@@ -1,0 +1,12 @@
+service whois
+{
+    port            = 43
+    disable         = no
+    socket_type     = stream
+    protocol        = tcp
+    wait            = no
+    user            = quagga
+    server          = /usr/local/bin/quagga-whois.pl
+    instances       = 20
+    log_type        = SYSLOG daemon debug
+}
